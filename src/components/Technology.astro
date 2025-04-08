@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+
+const technologies = [
+  { name: "HTML 5", icon: "logos:html-5" },
+  { name: "CSS", icon: "logos:css-3" },
+  { name: "Javascript", icon: "logos:javascript" },
+  { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+  { name: "Java", icon: "logos:java" },
+  { name: "C# .NET", icon: "logos:c-sharp" },
+  { name: "Angular", icon: "logos:angular-icon" },
+  { name: "Oracle DB", icon: "logos:oracle" },
+];
+---
+
+<div class="grid grid-cols-4 gap-2">
+  {
+    technologies.map((tech) => (
+      <div class="rounded-2xl border border-[#2e2e2e] p-1 flex flex-col justify-center items-center w-full h-full transition-transform duration-200 hover:bg-[#1d1d1d] group">
+        <div class="px-4 py-2 flex justify-center items-center flex-col space-y-2">
+          <Icon name={tech.icon} class="w-6 h-6 transition-transform duration-200 transform group-hover:-translate-y-1 " />
+          <span class="text-muted text-sm">{tech.name}</span>
+        </div>
+      </div>
+    ))
+  }
+</div>
