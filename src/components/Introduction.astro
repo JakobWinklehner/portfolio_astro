@@ -1,10 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import ReachOut from "../components/ReachOut.astro";
+import picOfMe from "../../public/picofme.png"; // Import the image
 ---
 
 <div class="flex pt-4">
   <picture class="rounded-full border-3 border-[#565656] p-1">
-    <img src="/picofme.png" alt="Jakob Winklehner" class="rounded-full h-20 w-20" />
+    <Image src={picOfMe} alt="Jakob Winklehner" class="rounded-full h-20 w-20" loading="lazy" />
   </picture>
   <div class="pl-6 p-2 flex flex-col justify-center">
     <div class="font-sora text-2xl">Hey, I'm Jakob 👋</div>
