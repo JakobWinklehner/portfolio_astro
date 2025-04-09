@@ -1,32 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import TextBlock from "../components/TextBlock.astro";
 ---
 
 <Layout title="Jakob Winklehner | Projects">
   <div class="pt-6">
-    <h1 class="">Projects</h1>
+    <h1>Projects</h1>
 
-    <div class="pt-4">
-      <h2>RDM - Remote Desktop Manager</h2>
-      <p class="text-muted">Aug 2023 – Jun 2024 · SYSco EDV</p>
-      <p class="pt-2">
-        Desktopanwendung zur Verwaltung von Fernwartungen für SYSco EDV. Entwickelt mit C#, WPF und DevExpress im Rahmen der Diplomarbeit.
-      </p>
-    </div>
+    <TextBlock title="RDM - Remote Desktop Manager" company="SYSco EDV" duration="Aug 2023 - Jun 2024">
+      Desktopanwendung zur Verwaltung von Fernwartungen für SYSco EDV. Entwickelt mit C#, WPF und DevExpress im Rahmen der Diplomarbeit.
+    </TextBlock>
 
-    <div class="pt-4">
-      <h2>PlanITup</h2>
-      <p class="text-muted">Jun 2022 – Feb 2024 · ABF GmbH</p>
-      <p class="pt-2">Webanwendung zur Optimierung von Projektorganisationen, entwickelt mit OpenUI5 im Rahmen der HTL-Ausbildung.</p>
-    </div>
+    <TextBlock title="PlanITup" company="ABF GmbH" duration="Jun 2022 - Feb 2024">
+      Webanwendung zur Optimierung von Projektorganisationen, entwickelt mit OpenUI5 im Rahmen der HTL-Ausbildung.
+    </TextBlock>
 
     <div class="pt-6">
-      <h1 class="">Awards</h1>
+      <h1>Awards</h1>
 
-      <div class="pt-4">
-        <h2>Project Award 2024</h2>
-        <p class="pt-2">2. Platz und Sonderpreis für wirtschaftliche Verwendbarkeit, HTL Perg – Diplomarbeit RDM - Remote Desktop Manager</p>
-      </div>
+      <TextBlock title="Project Award 2024">
+        2. Platz und Sonderpreis für wirtschaftliche Verwendbarkeit, HTL Perg - Diplomarbeit RDM - Remote Desktop Manager
+      </TextBlock>
     </div>
   </div>
 </Layout>

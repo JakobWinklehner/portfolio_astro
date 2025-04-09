@@ -32,4 +32,11 @@
   h3 {
     font-size: 1.1rem;
   }
+
+  .inTextLink {
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
