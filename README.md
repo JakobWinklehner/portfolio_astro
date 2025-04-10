@@ -1,48 +1,57 @@
-# Astro Starter Kit: Basics
+# 🌌 Jakob Winklehner's Portfolio
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Welcome to my personal portfolio, built with the power of **Astro** and **TailwindCSS**! 🚀 This project showcases my work, skills, and achievements in a clean and modern design.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✨ Features
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Blazing Fast**: Powered by Astro for optimized performance.
+- **Responsive Design**: Looks great on any device.
+- **Interactive Components**: Built with reusable Astro components.
+- **TailwindCSS Integration**: For rapid and consistent styling.
+- **Dynamic Content**: Easily extendable for future updates.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## � Project Structure
+
+Here's an overview of the project's structure:
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/               # Static assets (favicon, images, etc.)
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/           # SVGs and other design assets
+│   ├── components/       # Reusable UI components
+│   ├── layouts/          # Layout templates
+│   ├── pages/            # Individual pages (e.g., index.astro)
+│   └── styles/           # Custom styles
+├── .astro/               # Astro-generated files
+├── package.json          # Project metadata and dependencies
+└── pnpm-lock.yaml        # Dependency lockfile
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 🛠️ Commands
 
-All commands are run from the root of the project, from a terminal:
+Run these commands from the root of the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| Command          | Action                                           |
+| :--------------- | :----------------------------------------------- |
+| `pnpm install`   | Install all dependencies                         |
+| `pnpm dev`       | Start the development server at `localhost:4321` |
+| `pnpm build`     | Build the project for production                 |
+| `pnpm preview`   | Preview the production build locally             |
+| `pnpm astro ...` | Run Astro CLI commands                           |
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🛡️ License
+
+This project is licensed under the **MIT License**. Feel free to use and adapt it for your own portfolio!
+
+---
+
+Made with ❤️ by Jakob Winklehner.
