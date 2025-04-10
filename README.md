@@ -14,7 +14,7 @@ Welcome to my personal portfolio, built with the power of **Astro** and **Tailwi
 
 ---
 
-## � Project Structure
+## 📂 Project Structure
 
 Here's an overview of the project's structure:
 
