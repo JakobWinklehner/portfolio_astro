@@ -48,10 +48,4 @@ Run these commands from the root of the project:
 
 ---
 
-## 🛡️ License
-
-This project is licensed under the **MIT License**. Feel free to use and adapt it for your own portfolio!
-
----
-
 Made with ❤️ by Jakob Winklehner.
