@@ -40,4 +40,13 @@
       text-decoration: underline;
     }
   }
+
+  .link {
+    color: #9e9fa0;
+    transition: color 0.3s ease;
+  }
+
+  .link:hover {
+    color: #ffffff;
+  }
 }
