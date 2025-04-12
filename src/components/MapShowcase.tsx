@@ -18,6 +18,7 @@ const MapShowcase: React.FC<MapProps> = ({ apiKey }) => {
 			style: `https://api.maptiler.com/maps/basic-v2-dark/style.json?key=${apiKey}`,
 			center: [14.6088, 48.2266],
 			zoom: 4, // Start zoomed out
+			attributionControl: false,
 		});
 
 		map.on("load", () => {
