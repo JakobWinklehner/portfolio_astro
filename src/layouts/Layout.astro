@@ -11,10 +11,12 @@ import Footer from "../components/Footer.astro";
     <meta charset="UTF-8" />
     <title>{title}</title>
   </head>
-  <body class="font-sans bg-black text-white grid grid-cols-12">
-    <div class="col-span-6 col-start-4">
+  <body class="font-sans bg-black text-white flex flex-col items-center min-h-screen">
+    <div class="w-full max-w-screen-md px-4 flex flex-col flex-grow">
       <Nav />
-      <slot />
+      <main class="flex-grow">
+        <slot />
+      </main>
       <Footer />
     </div>
   </body>
