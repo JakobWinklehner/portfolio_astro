@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+const { images = [], alts = [] } = Astro.props;
+const isTwoImages = images?.length === 2;
+---
+
+<div class={`w-full h-full bg-black rounded-2xl flex ${isTwoImages ? "flex-row gap-4 justify-center" : "justify-center"} relative`}>
+  {
+    images.map((img: string, index: number) => (
+      <Image src={img} alt={alts[index] || `Image ${index + 1}`} class="z-10" loading="lazy" height={300} width={300} />
+    ))
+  }
+</div>
