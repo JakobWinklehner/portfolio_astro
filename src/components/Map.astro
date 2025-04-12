@@ -1,5 +1,8 @@
-<div class="pt-16">
-  <div class="h-40 w-full bg-white flex justify-center items-center rounded-xl">
-    <div class="text-black font-sora text-2xl">Map</div>
-  </div>
+---
+import MapShowcase from "./MapShowcase.tsx";
+const apiKey = import.meta.env.PUBLIC_MAPTILER_API_KEY;
+---
+
+<div class="pt-12">
+  <MapShowcase client:only="react" apiKey={apiKey} />
 </div>
