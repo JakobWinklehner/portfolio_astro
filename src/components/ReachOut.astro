@@ -1,8 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <div class="flex items-center">
   <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
 
   <div class="relative group pl-2">
     <span class="text-muted group-hover:hidden">Available for work</span>
-    <span class="text-muted hidden group-hover:inline">Reach out!</span>
+    <a href="/contact" class="flex items-center link group text-muted space-x-1">
+      <span class="hidden group-hover:inline">Contact me!</span>
+      <Icon name="grommet-icons:mail" class="w-4 h-4 hidden group-hover:inline" />
+    </a>
   </div>
 </div>
