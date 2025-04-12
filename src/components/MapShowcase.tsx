@@ -15,7 +15,7 @@ const MapShowcase: React.FC<MapProps> = ({ apiKey }) => {
 
 		const map = new maplibregl.Map({
 			container: mapContainer.current,
-			style: `https://api.maptiler.com/maps/basic-dark/style.json?key=${apiKey}`,
+			style: `https://api.maptiler.com/maps/basic-v2-dark/style.json?key=${apiKey}`,
 			center: [14.6088, 48.2266],
 			zoom: 4, // Start zoomed out
 		});
