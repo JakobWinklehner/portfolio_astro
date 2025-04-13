@@ -51,7 +51,7 @@ const MapShowcase: React.FC<MapProps> = ({ apiKey }) => {
 				element: markerEl, // Use the custom element
 				draggable: false, // Ensure the marker is not draggable
 			})
-				.setLngLat([14.6088, 48.2266])
+				.setLngLat([14.6078, 48.2285])
 				.addTo(map);
 		});
 

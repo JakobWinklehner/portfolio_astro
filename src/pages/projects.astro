@@ -1,31 +1,10 @@
 ---
+// filepath: c:\Users\jakob\Desktop\Portfolios\Portfolio_Astro\portfolio\src\pages\projects.astro
 import Layout from "../layouts/Layout.astro";
-import TextBlock from "../components/TextBlock.astro";
-import ShowcaseImage from "../components/ShowcaseImage.astro";
-import rdmImage from "/public/projects/rdm.png"; // Import the image
-import projectAwardImage from "/public/projects/ProjectAward3.jpg"; // Import the image
-import projectAwardImage2 from "/public/projects/ProjectAward2_NEW.jpg"; // Import the image
+import ProjectsComp from "../components/ProjectsComp";
 ---
 
 <Layout title="Jakob Winklehner | Projects">
-  <div class="pt-6">
-    <h1>Projects 👨‍💻</h1>
-
-    <TextBlock title="RDM - Remote Desktop Manager" company="SYSco EDV" duration="Aug 2023 - Jun 2024">
-      Desktopanwendung zur Verwaltung von Fernwartungen für SYSco EDV. Entwickelt mit C#, WPF und DevExpress im Rahmen der Diplomarbeit.
-    </TextBlock>
-
-    <TextBlock title="PlanITup" company="ABF GmbH" duration="Jun 2022 - Feb 2024">
-      Webanwendung zur Optimierung von Projektorganisationen, entwickelt mit OpenUI5 im Rahmen der HTL-Ausbildung.
-    </TextBlock>
-
-    <div class="pt-6">
-      <h1>Awards 🏆</h1>
-
-      <TextBlock title="Project Award 2024 - HTL Perg">
-        <strong>2. Platz</strong> / RDM - Remote Desktop Manager <br />
-        <strong>Sonderpreis für wirtschaftliche Verwendbarkeit</strong> / RDM - Remote Desktop Manager
-      </TextBlock>
-    </div>
-  </div>
+  <!-- Hydrate the React component -->
+  <ProjectsComp client:load />
 </Layout>
