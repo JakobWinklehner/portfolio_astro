@@ -1,0 +1,21 @@
+---
+import ProjectShowcase from "./ProjectShowcase.astro";
+import { projects } from "../data/projectsData";
+
+// Sort projects by the end date in descending order
+const sortedProjects = projects.sort((a, b) => {
+  const dateA = new Date(a.duration.split(" - ")[1]).getTime();
+  const dateB = new Date(b.duration.split(" - ")[1]).getTime();
+  return dateB - dateA;
+});
+
+// Get the two latest projects
+const latestProjects = sortedProjects.slice(0, 2);
+---
+
+<div>
+  <h2>Recent Projects:</h2>
+  <div class="flex space-x-4 pb-8">
+    {latestProjects.map((project) => <ProjectShowcase {...project} />)}
+  </div>
+</div>

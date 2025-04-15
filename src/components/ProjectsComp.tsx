@@ -1,6 +1,7 @@
 import type React from "react";
 import HeadingSwitcher from "./HeadingSwitcher";
 import TextBlock from "./TextBlock";
+import { projects } from "../data/projectsData";
 
 const ProjectsComp: React.FC = () => {
 	return (
@@ -9,23 +10,18 @@ const ProjectsComp: React.FC = () => {
 				tab1Label="Projects 👨‍💻"
 				tab2Label="🏆 Awards"
 				tab1Content={
+					// biome-ignore lint/complexity/noUselessFragments: <explanation>
 					<>
-						<TextBlock
-							title="RDM - Remote Desktop Manager"
-							company="SYSco EDV"
-							duration="Aug 2023 - Jun 2024"
-						>
-							Desktopanwendung zur Verwaltung von Fernwartungen für SYSco EDV.
-							Entwickelt mit C#, WPF und DevExpress im Rahmen der Diplomarbeit.
-						</TextBlock>
-						<TextBlock
-							title="PlanITup"
-							company="ABF GmbH"
-							duration="Jun 2022 - Feb 2024"
-						>
-							Webanwendung zur Optimierung von Projektorganisationen, entwickelt
-							mit OpenUI5 im Rahmen der HTL-Ausbildung.
-						</TextBlock>
+						{projects.map((project) => (
+							<TextBlock
+								key={project.title}
+								title={project.title}
+								company={project.company}
+								duration={project.duration}
+							>
+								{project.description}
+							</TextBlock>
+						))}
 					</>
 				}
 				tab2Content={

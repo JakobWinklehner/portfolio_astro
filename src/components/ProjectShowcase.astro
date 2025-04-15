@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+export interface ProjectProps {
+  title: string;
+  description: string;
+  image: string;
+  company: string;
+  duration: string;
+}
+
+const { title, description, image } = Astro.props as ProjectProps;
+---
+
+<div class="w-1/2">
+  <div class="flex justify-center bg-white">
+    <!--  <Image src={image} alt={title} class="w-64 rounded-t-2xl" loading="lazy" height={300} width={300} />-->
+    <div class="w-64 text-black h-20 flex justify-center items-center">Image</div>
+  </div>
+  <h3>{title}</h3>
+  <div>{description}</div>
+</div>
