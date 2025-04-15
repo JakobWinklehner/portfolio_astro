@@ -3,7 +3,7 @@ export interface Project {
   company: string;
   duration: string;
   description: string;
-  image: string; // Add an image property
+  image: string;
 }
 
 export const projects: Project[] = [
