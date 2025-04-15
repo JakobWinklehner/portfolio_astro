@@ -1,13 +1,27 @@
 ---
 import { Image } from "astro:assets";
 import ReachOut from "../components/ReachOut.astro";
-import picOfMe from "../../public/picofme.png"; // Import the image
+import profilbild from "../../public/profilbild.png"; // Import the image
+import profilbildLego from "../../public/profilbild_lego.png"; // Import the image
 ---
 
 <div class="flex pt-4">
-  <picture class="rounded-full border-3 border-[#565656] p-1">
-    <Image src={picOfMe} alt="Jakob Winklehner" class="rounded-full h-20 w-20" loading="lazy" />
-  </picture>
+  <div class="relative h-24 w-24 rounded-full border-3 border-[#565656] p-1 group">
+    <div class="relative h-full w-full rounded-full overflow-hidden">
+      <Image
+        src={profilbild}
+        alt="Jakob Winklehner"
+        class="absolute inset-0 h-full w-full rounded-full transition-opacity duration-300 group-hover:opacity-0"
+        loading="lazy"
+      />
+      <Image
+        src={profilbildLego}
+        alt="Jakob Winklehner LEGO"
+        class="absolute inset-0 h-full w-full rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        loading="lazy"
+      />
+    </div>
+  </div>
   <div class="pl-6 p-2 flex flex-col justify-center">
     <h1>Hey, I'm Jakob 👋</h1>
     <ReachOut />
