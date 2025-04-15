@@ -29,14 +29,11 @@ const ProjectsComp: React.FC = () => {
 					</>
 				}
 				tab2Content={
-					// biome-ignore lint/complexity/noUselessFragments: <explanation>
-					<>
-						<TextBlock title="Project Award 2024 - HTL Perg">
-							<strong>2. Platz</strong> / RDM - Remote Desktop Manager <br />
-							<strong>Sonderpreis für wirtschaftliche Verwendbarkeit</strong> /
-							RDM - Remote Desktop Manager
-						</TextBlock>
-					</>
+					<TextBlock title="Project Award 2024 - HTL Perg">
+						<strong>2. Platz</strong> / RDM - Remote Desktop Manager <br />
+						<strong>Sonderpreis für wirtschaftliche Verwendbarkeit</strong> /
+						RDM - Remote Desktop Manager
+					</TextBlock>
 				}
 			/>
 		</div>
