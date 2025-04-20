@@ -6,6 +6,11 @@
   .text-muted {
     color: #9e9fa0; /* Grau */
   }
+
+  .bg-muted {
+    background-color: #9e9fa0; /* Grau */
+  }
+
   .font-sora {
     font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
