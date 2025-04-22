@@ -39,11 +39,15 @@
     font-size: 1.1rem;
   }
 
-  .inTextLink {
+  .inTextLinkBold {
     font-weight: bold;
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .inTextLink:hover {
+    text-decoration: underline;
   }
 
   .link {

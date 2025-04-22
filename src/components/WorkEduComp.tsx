@@ -17,7 +17,7 @@ const WorkEduComp: React.FC = () => {
 						>
 							Entwicklung einer Desktopanwendung mit C#, WPF und DevExpress zur
 							Verwaltung von Fernwartungen. Beitrag zur Diplomarbeit{" "}
-							<a href="/projects" className="inTextLink">
+							<a href="/projects" className="inTextLinkBold">
 								RDM - Remote Desktop Manager
 							</a>{" "}
 							für SYSco EDV.
