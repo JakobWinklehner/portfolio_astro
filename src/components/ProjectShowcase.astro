@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import TechnologyTag from "./TechnologyTag.astro";
 
 export interface ProjectProps {
   title: string;
@@ -21,12 +22,6 @@ const { title, description, image, technologies } = Astro.props as ProjectProps;
   <h3>{title}</h3>
   <div>{description}</div>
   <div class="flex flex-wrap gap-2 pt-2">
-    {
-      technologies.map((tech) => (
-        <div class="px-2 py-1 rounded border border-[#2e2e2e] text-xs transition-transform duration-200 hover:bg-[#1d1d1d] group">
-          <span class="transition-transform duration-200 transform group-hover:-translate-y-1">{tech}</span>
-        </div>
-      ))
-    }
+    {technologies.map((tech) => <TechnologyTag tech={tech} />)}
   </div>
 </div>

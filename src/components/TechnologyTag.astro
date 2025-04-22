@@ -1,0 +1,11 @@
+---
+export interface TechnologyTagProps {
+  tech: string;
+}
+
+const { tech } = Astro.props as TechnologyTagProps;
+---
+
+<div class="px-2 py-1 rounded border border-[#2e2e2e] text-xs transition-transform duration-200 hover:bg-[#1d1d1d] group">
+  <span class="transition-transform duration-200 transform group-hover:-translate-y-1">{tech}</span>
+</div>
