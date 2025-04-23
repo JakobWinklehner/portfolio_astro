@@ -2,6 +2,22 @@
 @import "tailwindcss";
 @import "maplibre-gl/dist/maplibre-gl.css";
 
+:root {
+  color-scheme: light dark;
+
+  --background: light-dark(#f5f5f5, #0b0b0a);
+  --background-muted: light-dark(#d1d1d1, #171717);
+  --foreground: light-dark(#0b0b0a, #f5f5f5);
+  --foreground-muted: light-dark(#9e9fa0, #a3a3a3);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-background-muted: var(--background-muted);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+}
+
 @layer utilities {
   .text-muted {
     color: #9e9fa0; /* Grau */
@@ -56,6 +72,6 @@
   }
 
   .link:hover {
-    color: #ffffff;
+    color: var(--foreground);
   }
 }

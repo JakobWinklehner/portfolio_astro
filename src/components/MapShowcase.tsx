@@ -13,9 +13,17 @@ const MapShowcase: React.FC<MapProps> = ({ apiKey }) => {
 	useEffect(() => {
 		if (!mapContainer.current) return;
 
+		// Determine the map style based on system color scheme
+		const isDarkMode = window.matchMedia(
+			"(prefers-color-scheme: dark)",
+		).matches;
+		const mapStyle = isDarkMode
+			? `https://api.maptiler.com/maps/basic-v2-dark/style.json?key=${apiKey}`
+			: `https://api.maptiler.com/maps/basic-v2-light/style.json?key=${apiKey}`;
+
 		const map = new maplibregl.Map({
 			container: mapContainer.current,
-			style: `https://api.maptiler.com/maps/basic-v2-dark/style.json?key=${apiKey}`,
+			style: mapStyle,
 			center: [14.6088, 48.2266],
 			zoom: 4, // Start zoomed out
 			attributionControl: false,
