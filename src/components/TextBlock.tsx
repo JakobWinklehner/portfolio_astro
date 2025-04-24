@@ -17,11 +17,13 @@ const TextBlock: React.FC<TextBlockProps> = ({
 		<div className="pt-4">
 			<h2>{title}</h2>
 			{company && duration && (
-				<p className="text-muted">
+				<p className="text-foreground-muted">
 					{company} - {duration}
 				</p>
 			)}
-			{!company && duration && <p className="text-muted">{duration}</p>}
+			{!company && duration && (
+				<p className="text-foreground-muted">{duration}</p>
+			)}
 			<p className="pt-2">{children}</p>
 		</div>
 	);
