@@ -53,7 +53,33 @@ const MapShowcase: React.FC<MapProps> = ({ apiKey }) => {
 
 			// Create a GPS-like animation
 			const markerEl = document.createElement("div");
-			markerEl.className = "relative flex items-center justify-center";
+			markerEl.className = "relative flex items-center justify-center cursor-pointer";
+
+			// Add the hover tooltip above the marker
+			const tooltip = document.createElement("div");
+			tooltip.className =
+				"pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap rounded-full px-3 py-1 text-xs shadow-lg opacity-0 transition-opacity duration-200 z-20";
+			tooltip.style.backgroundColor = "var(--color-background)";
+			tooltip.style.color = "var(--color-foreground)";
+			tooltip.textContent = "Hey, you found me!";
+
+			const tooltipArrow = document.createElement("div");
+			tooltipArrow.className =
+				"pointer-events-none absolute left-1/2 top-full -translate-x-1/2 h-2 w-2 rotate-45";
+			tooltipArrow.style.backgroundColor = "var(--color-background)";
+
+			tooltip.appendChild(tooltipArrow);
+			markerEl.appendChild(tooltip);
+
+			markerEl.addEventListener("mouseenter", () => {
+				tooltip.classList.remove("opacity-0");
+				tooltip.classList.add("opacity-100");
+			});
+
+			markerEl.addEventListener("mouseleave", () => {
+				tooltip.classList.remove("opacity-100");
+				tooltip.classList.add("opacity-0");
+			});
 
 			// Add the inner green dot
 			const innerDot = document.createElement("div");
