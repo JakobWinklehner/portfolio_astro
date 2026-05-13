@@ -27,6 +27,20 @@ const MapShowcase: React.FC<MapProps> = ({ apiKey }) => {
 			center: [14.6088, 48.2266],
 			zoom: 4, // Start zoomed out
 			attributionControl: false,
+			dragPan: false,
+			touchZoomRotate: false,
+			scrollZoom: false,
+		});
+
+		// Handle scroll zoom to always zoom to map center
+		mapContainer.current.addEventListener("wheel", (e) => {
+			e.preventDefault();
+			const zoomDelta = e.deltaY > 0 ? -0.5 : 0.5;
+			const currentZoom = map.getZoom();
+			map.easeTo({
+				zoom: currentZoom + zoomDelta,
+				duration: 300,
+			});
 		});
 
 		map.on("load", () => {
