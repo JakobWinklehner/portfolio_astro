@@ -2,8 +2,8 @@ import type React from "react";
 import { useState, type ReactNode } from "react";
 
 interface HeadingSwitcherProps {
-	tab1Label: string;
-	tab2Label: string;
+	tab1Label: ReactNode;
+	tab2Label: ReactNode;
 	tab1Content: ReactNode;
 	tab2Content: ReactNode;
 }
@@ -18,7 +18,7 @@ const HeadingSwitcher: React.FC<HeadingSwitcherProps> = ({
 
 	return (
 		<div className="">
-			<div className="flex justify-between space-x-4 mb-4">
+			<div className="flex flex-wrap justify-between gap-4 mb-4">
 				<button
 					type="button"
 					className={`cursor-pointer ${activeTab === "tab1" ? "underline" : ""}`}

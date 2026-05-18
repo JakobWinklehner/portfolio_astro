@@ -6,8 +6,18 @@ const WorkEduComp: React.FC = () => {
 	return (
 		<div className="pt-6">
 			<HeadingSwitcher
-				tab1Label="Work Experience 🛠️"
-				tab2Label="🏫 Education"
+				tab1Label={
+					<>
+						<span className="sm:hidden">Work 🛠️</span>
+						<span className="hidden sm:inline">Work Experience 🛠️</span>
+					</>
+				}
+				tab2Label={
+					<>
+						<span className="sm:hidden">🏫 Education</span>
+						<span className="hidden sm:inline">🏫 Education</span>
+					</>
+				}
 				tab1Content={
 					<>
 						<TextBlock

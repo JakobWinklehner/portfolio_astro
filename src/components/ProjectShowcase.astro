@@ -14,7 +14,7 @@ export interface ProjectProps {
 const { title, description, image, technologies } = Astro.props as ProjectProps;
 ---
 
-<div class="w-1/2">
+<div class="w-full md:w-1/2">
   <div class="flex justify-center bg-white mb-4">
     <!--  <Image src={image} alt={title} class="w-64 rounded-t-2xl" loading="lazy" height={300} width={300} />-->
     <a href="/projects"> <div class="w-64 text-black h-20 flex justify-center items-center">Image</div></a>
