@@ -11,6 +11,16 @@ const WorkEduComp: React.FC = () => {
 				tab1Content={
 					<>
 						<TextBlock
+							title="Mobile Developer"
+							company="Aescudata GmbH - Steyr"
+							duration="Jun 2025 - Present"
+						>
+							Vollzeit-Tätigkeit als Mobile Developer im hybriden
+							Arbeitsmodell. Entwicklung mobiler Anwendungen bei
+							Aescudata GmbH.
+						</TextBlock>
+
+						<TextBlock
 							title=".NET Software Developer Intern"
 							company="SYSco EDV ist Vertrauenssache GmbH - Schwertberg"
 							duration="Aug 2023 - Sep 2023"
